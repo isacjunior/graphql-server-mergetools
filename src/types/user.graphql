@@ -1,0 +1,13 @@
+type User {
+  name: String,
+  company: String,
+  blog: String,
+  location: String,
+  bio: String,
+  following: Int,
+  followers: Int,
+}
+
+type Query {
+  user(login: String): User
+}

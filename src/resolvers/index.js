@@ -1,8 +1,8 @@
 import { mergeResolvers } from 'merge-graphql-schemas'
-import postResolver from './post'
+import userResolver from './user'
 
 const resolvers = mergeResolvers([
-  postResolver,
+  userResolver,
 ])
 
 export default resolvers
