@@ -1,12 +1,7 @@
-import GithubService from '../services/github'
-
-const user = async (_, { login }) => {
-  const { data } = await GithubService.getUser(login)
-  return data
-}
+import { userLoader } from '../loaders'
 
 export default {
   Query: {
-    user,
+    user: (_, { login }) => userLoader.load(login),
   },
 }
